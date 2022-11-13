@@ -15,4 +15,4 @@ toctool:
 
 
 toc:
-	gh-md-toc --insert README.md
+	gh-md-toc --insert --no-backup README.md

@@ -3,9 +3,11 @@
    * [SSEBOP PRODUCTION](#ssebop-production)
       * [Steps](#steps)
       * [A note about style and zen from pep20](#a-note-about-style-and-zen-from-pep20)
+   * [Engineering](#engineering)
+         * [TOC STuff](#toc-stuff)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Sun Nov 13 19:12:13 UTC 2022 -->
+<!-- Added by: ec2-user, at: Sun Nov 13 19:18:13 UTC 2022 -->
 
 <!--te-->
 
@@ -17,11 +19,11 @@ ssebop-study
 
 ### Steps
 
-1.Download and wrangle LST and NDVI/NDWI data from DSS website
-2.create ETF using new FANO method
-3.create corrected ETf with BABA method
-4.create ETa using reference ET --> output geotiff
-5.create ET anomaly map (ETa/median ETa)  --> output graphic
+1. Download and wrangle LST and NDVI/NDWI data from DSS website
+2. create ETF using new FANO method
+3. create corrected ETf with BABA method
+4. create ETa using reference ET --> output geotiff
+5. create ET anomaly map (ETa/median ETa)  --> output graphic
 
 > this would be the operational version that is processed every 2nd, 12th, and 22nd of the month
 
