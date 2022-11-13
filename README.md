@@ -27,6 +27,13 @@ ssebop-study
 
 > this would be the operational version that is processed every 2nd, 12th, and 22nd of the month
 
+## Actions
+
+### Understanding The Inputs
+
+#### LST
+- create a notebook to explore
+
 ### A note about style and zen from pep20
 
  - Beautiful is better than ugly.
