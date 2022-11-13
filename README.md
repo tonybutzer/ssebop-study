@@ -5,12 +5,15 @@
    * [Actions](#actions)
       * [1. Understanding The Inputs](#1-understanding-the-inputs)
          * [LST](#lst)
+   * [Performance Optimizing](#performance-optimizing)
+   * [Refining the requirements - can we go smaller than the globe](#refining-the-requirements---can-we-go-smaller-than-the-globe)
+   * [OPERATIONAL HARDENING](#operational-hardening)
       * [A note about style and zen from pep20](#a-note-about-style-and-zen-from-pep20)
    * [Engineering](#engineering)
          * [TOC STuff](#toc-stuff)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Sun Nov 13 20:20:02 UTC 2022 -->
+<!-- Added by: ec2-user, at: Sun Nov 13 20:28:30 UTC 2022 -->
 
 <!--te-->
 
@@ -37,6 +40,19 @@ ssebop-study
 #### LST
 - fix makefile and readme etc
 - `create a notebook to explore`
+
+## Performance Optimizing
+
+## Refining the requirements - can we go smaller than the globe
+
+## OPERATIONAL HARDENING
+
+- code simplification and refactoring
+- organized pip installable library
+- pipeline framework - baked off
+	- kendro
+	- airflow
+	- panel pipelines
 
 
 ### A note about style and zen from pep20
