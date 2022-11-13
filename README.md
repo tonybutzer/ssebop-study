@@ -13,7 +13,7 @@
          * [TOC STuff](#toc-stuff)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Sun Nov 13 20:28:30 UTC 2022 -->
+<!-- Added by: ec2-user, at: Sun Nov 13 20:30:58 UTC 2022 -->
 
 <!--te-->
 
@@ -38,8 +38,9 @@ ssebop-study
 ### 1. Understanding The Inputs
 
 #### LST
+- `build ssebop-study conda env`
 - fix makefile and readme etc
-- `create a notebook to explore`
+- create a notebook to explore
 
 ## Performance Optimizing
 
