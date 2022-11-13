@@ -3,14 +3,14 @@
    * [SSEBOP PRODUCTION](#ssebop-production)
       * [Steps](#steps)
    * [Actions](#actions)
-      * [Understanding The Inputs](#understanding-the-inputs)
+      * [1. Understanding The Inputs](#1-understanding-the-inputs)
          * [LST](#lst)
       * [A note about style and zen from pep20](#a-note-about-style-and-zen-from-pep20)
    * [Engineering](#engineering)
          * [TOC STuff](#toc-stuff)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Sun Nov 13 19:20:37 UTC 2022 -->
+<!-- Added by: ec2-user, at: Sun Nov 13 19:21:40 UTC 2022 -->
 
 <!--te-->
 
@@ -32,10 +32,12 @@ ssebop-study
 
 ## Actions
 
-### Understanding The Inputs
+### 1. Understanding The Inputs
 
 #### LST
+- fix makefile and readme etc
 - create a notebook to explore
+
 
 ### A note about style and zen from pep20
 
