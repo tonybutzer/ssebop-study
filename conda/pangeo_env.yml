@@ -1,0 +1,36 @@
+name: ssebop-study
+channels:
+  - conda-forge
+dependencies:
+  - python=3
+#holoviz
+  - hvplot
+  - geoviews
+  - datashader
+  - fastparquet
+  - python-snappy
+#jupyter
+  - jupyterlab 
+  - jupyter-server-proxy
+  - jupyter-resource-usage
+  - widgetsnbextension
+  - dask-labextension
+  - nodejs
+#xarray-related
+  - xarray
+  - intake-xarray
+  - dask
+  - dask-jobqueue
+  - zarr
+  - h5netcdf
+  - rechunker
+  - xesmf
+  - rioxarray
+#other 
+  - fsspec
+  - s3fs
+  - erddapy
+  - xmltodict
+  - folium
+#aws
+  - boto3
