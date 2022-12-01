@@ -1,24 +1,29 @@
 <!--ts-->
 * [ssebop-study](#ssebop-study)
-   * [SSEBOP PRODUCTION](#ssebop-production)
-      * [Steps](#steps)
-   * [Actions](#actions)
-      * [1. Understanding The Inputs](#1-understanding-the-inputs)
-         * [LST](#lst)
-   * [Performance Optimizing](#performance-optimizing)
-   * [Refining the requirements - can we go smaller than the globe](#refining-the-requirements---can-we-go-smaller-than-the-globe)
-   * [OPERATIONAL HARDENING](#operational-hardening)
-      * [A note about style and zen from pep20](#a-note-about-style-and-zen-from-pep20)
-   * [Engineering](#engineering)
-         * [TOC STuff](#toc-stuff)
+* [BUGS](#bugs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Thu Dec  1 16:58:41 UTC 2022 -->
+<!-- Added by: ec2-user, at: Thu Dec  1 18:49:10 UTC 2022 -->
 
 <!--te-->
 
 # ssebop-study
 ssebop-study
+
+# BUGS
+
+since devops gives us a super-small /root partition - docker builds easily run out of space.
+
+- did not want ti use an nfs mount
+- so used the data disk by adding a 
+
+- see /etc/docker/daemon.json on kul's machine
+
+```
+$ cat /etc/docker/daemon.json
+{
+  "data-root": "/data/docker"
+}
 
 
 ## SSEBOP PRODUCTION
