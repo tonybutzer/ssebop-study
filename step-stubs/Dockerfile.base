@@ -1,0 +1,9 @@
+from continuumio/miniconda3
+
+workdir /home
+copy pangeo_env.yml /home
+
+run conda config --add channels conda-forge --force && \
+    conda install -y mamba && \
+    mamba env update -n base --file pangeo_env.yml
+
