@@ -17,3 +17,15 @@ toctool:
 
 toc:
 	gh-md-toc --insert --no-backup README.md
+
+
+bashrc:
+	cp /wsefs/KEYS/example_bashrc ~/.bashrc
+	cp /wsefs/KEYS/example_profile ~/.profile
+
+docker:
+	sudo yum install docker
+	sudo usermod -aG docker ${USER}
+	sudo systemctl enable docker
+	sudo systemctl start docker
+	sudo cp .....
