@@ -1,12 +1,24 @@
 <!--ts-->
+* [Design](#design)
 * [ssebop-study](#ssebop-study)
 * [BUGS](#bugs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Mon Dec  5 13:01:32 UTC 2022 -->
+<!-- Added by: ec2-user, at: Mon Dec  5 13:06:42 UTC 2022 -->
 
 <!--te-->
 
+
+# Design
+
+- `ssebop-launcher` runs on ws-costanalyzer
+	- starts the ssebop production machine - ws-butzer-dev for testing
+	- creates a workorder in /wsefs/pipeline/todo/wo-date.yml
+- `pipe-runner`
+	- sleeps for 6 minutes in a loop
+	- looks for wo in todo
+	- runs the workorder pipeline - 5 steps
+	- shuts it self off - using `sudo shutdown -h now`
 # ssebop-study
 ssebop-study
 
