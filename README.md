@@ -4,7 +4,7 @@
 * [BUGS](#bugs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Mon Dec  5 13:06:42 UTC 2022 -->
+<!-- Added by: ec2-user, at: Mon Dec  5 13:11:18 UTC 2022 -->
 
 <!--te-->
 
@@ -15,6 +15,7 @@
 	- starts the ssebop production machine - ws-butzer-dev for testing
 	- creates a workorder in /wsefs/pipeline/todo/wo-date.yml
 - `pipe-runner`
+	- runs as a service - see Makefile
 	- sleeps for 6 minutes in a loop
 	- looks for wo in todo
 	- runs the workorder pipeline - 5 steps
