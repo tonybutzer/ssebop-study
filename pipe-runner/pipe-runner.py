@@ -1,5 +1,6 @@
 import yaml
 import logging
+import time
 
 print ('hello from pipe-runner')
 
@@ -13,9 +14,11 @@ print(cfg)
 
 logdir = cfg['log']
 filename = f'{logdir}/pipe-runner.log'
-
-# logging.basicConfig(filename=filename, filemode='w', format='%(asctime)s - %(message)s', level=logging.INFO)
 logging.basicConfig(filename=filename, format='%(asctime)s - %(message)s', level=logging.INFO)
-logging.info('pipe-runner ran and thats good! ')
+
+while True:
+    logging.info('pipe-runner ran and thats good! ')
+    time.sleep(360)
+
 
 

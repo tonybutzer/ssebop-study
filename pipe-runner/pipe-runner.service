@@ -1,0 +1,12 @@
+[Unit]
+Description=PipeRunner Service
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+ExecStart=/home/ec2-user/opt/ssebop-study/pipe-runner/run.sh
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
