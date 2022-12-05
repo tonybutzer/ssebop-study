@@ -1,6 +1,31 @@
 import yaml
 import logging
 import time
+import os
+
+def start_docker(step):
+    global logging
+    logging.info(f'start_docker:{step}')
+
+def read_wo(wo_file):
+    with open(wo_file, "r") as my_f:
+        work_list = yaml.safe_load(my_f)
+    print(work_list)
+    return work_list
+
+def do_work(wo_file):
+    global logging
+    logging.info(f'do_work: wo_file: {wo_file}')
+    wl = read_wo(wo_file)
+    logging.info(f'do_work: list {wl}')
+    start_docker(wl[0])
+
+def look_for_work(cfg, logging):
+    todo_dir = cfg['todo']
+    wo_files = os.listdir(todo_dir)
+    my_work = f'{todo_dir}/{wo_files[0]}'
+    logging.info(f'working on {my_work}')
+    do_work(my_work)
 
 print ('hello from pipe-runner')
 
@@ -12,13 +37,16 @@ with open(config_file, "r") as ymlfile:
 print(cfg)
 
 
+global logging
 logdir = cfg['log']
 filename = f'{logdir}/pipe-runner.log'
 logging.basicConfig(filename=filename, format='%(asctime)s - %(message)s', level=logging.INFO)
 
 while True:
-    logging.info('pipe-runner ran and thats good! ')
-    time.sleep(360)
+    secs=45
+    look_for_work(cfg, logging)
+    logging.info(f'pipe-runner wait {secs} and look for work orders! ')
+    time.sleep(secs)
 
 
 
