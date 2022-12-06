@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
-
 import os
+import logging
 import requests
 from requests.auth import HTTPBasicAuth
 from bs4 import BeautifulSoup
@@ -11,17 +10,12 @@ from bs4 import BeautifulSoup
 import yaml
 import os
 
-
-
 import zipfile
-
-
 
 def unzip_unlink(path_to_zip_file, directory_to_extract_to):
     with zipfile.ZipFile(path_to_zip_file, 'r') as zip_ref:
         zip_ref.extractall(directory_to_extract_to)
     os.unlink(path_to_zip_file)
-
 
 
 class Wrangle:
@@ -57,11 +51,13 @@ class Wrangle:
             yield(link['href'])
     
     def download(self, url_link):
+        global logging
 
         if not os.path.exists(self.out_loc):
             os.makedirs(self.out_loc)  # create folder if it does not exist
         
         url =f'{self.site}{url_link}'
+        logging.info(f'Downloading url ==> {url}')
 
         filename = url.split('/')[-1].replace(" ", "_")  # be careful with file names
         file_path = os.path.join(self.out_loc, filename)
@@ -94,7 +90,7 @@ if __name__ == "__main__":
 
     global logging
     logdir='/wsefs/pipeline/log'
-    filename = f'{logdir}/pipe-runner.log'
+    filename = f'{logdir}/wrangle.log'
     logging.basicConfig(filename=filename, format='%(asctime)s - %(message)s', level=logging.INFO)
 
     logging.info(f'wrangler started')
@@ -106,7 +102,7 @@ if __name__ == "__main__":
         if link.endswith('.zip'):
             print(link)
             wr.download(link)
-            print('COMPLETED', link)
+            logging.info('wrangler COMPLETED {link}')
             just_file = link.split('/')[-1]
             # full_path = f'{out_loc}{just_file}'
             # print(full_path)
