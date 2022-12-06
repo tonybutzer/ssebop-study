@@ -28,4 +28,4 @@ docker:
 	sudo usermod -aG docker ${USER}
 	sudo systemctl enable docker
 	sudo systemctl start docker
-	sudo cp .....
+	sudo cp daemon.json /etc/docker/daemon.json

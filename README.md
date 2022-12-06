@@ -1,10 +1,14 @@
 <!--ts-->
 * [Design](#design)
+* [Integration Actions](#integration-actions)
+   * [Wrangle](#wrangle)
+   * [Docker](#docker)
+   * [Dry-Run Wrangle](#dry-run-wrangle)
 * [ssebop-study](#ssebop-study)
 * [BUGS](#bugs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Mon Dec  5 18:18:12 UTC 2022 -->
+<!-- Added by: ec2-user, at: Tue Dec  6 16:39:16 UTC 2022 -->
 
 <!--te-->
 
@@ -20,6 +24,30 @@
 	- looks for wo in todo
 	- runs the workorder pipeline - 5 steps
 	- shuts it self off - using `sudo shutdown -h now`
+
+
+# Integration Actions
+## Wrangle
+- add logging
+- add times
+- discuss data locations
+	- /wsefs/pipeline/sdata - or wdata for wrangle
+	- /wsefe/pipeline/ndata - for snap to grid normalized data ?
+## Docker
+
+1. Build a base image - gabe
+	- steal from tony's repo
+2. Study step/wrangle Docker file from git - here:
+	- https://github.com/tonybutzer/ssebop-study/tree/main/step-stubs/steps/wrangle
+
+
+## Dry-Run Wrangle
+- clean up sdata dir
+- start the service
+- shutdown the machine
+- run ssebop-launcher
+	- 12 minutes late we should have temperature data
+
 # ssebop-study
 ssebop-study
 
