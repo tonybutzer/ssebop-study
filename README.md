@@ -8,7 +8,7 @@
 * [BUGS](#bugs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Tue Dec  6 16:48:14 UTC 2022 -->
+<!-- Added by: ec2-user, at: Tue Dec  6 17:48:26 UTC 2022 -->
 
 <!--te-->
 
@@ -50,7 +50,9 @@
 - start the service
 - shutdown the machine
 - run ssebop-launcher
-	- 12 minutes late we should have temperature data
+	- 12 minutes later we should have temperature data
+		- 10 minutes to download
+		- 2 minutes to unzip
 
 # ssebop-study
 ssebop-study
