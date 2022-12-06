@@ -28,3 +28,7 @@ stat:
 
 d:
 	python3 test_docker_wrangle_run.py
+
+
+publish:
+	(cd /home/ec2-user/opt/ssebop-study; make publish)

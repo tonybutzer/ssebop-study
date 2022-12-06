@@ -33,6 +33,7 @@ def do_work(wo_file):
     logging.info(f'do_work: list {wl}')
     dequeue_work(wo_file)
     start_docker(wl[0])
+    start_docker(wl[1])
 
 def look_for_work(cfg, logging):
     todo_dir = cfg['todo']
