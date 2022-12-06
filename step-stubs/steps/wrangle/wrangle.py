@@ -70,7 +70,7 @@ class Wrangle:
 
         r = requests.get(url, stream=True, auth = HTTPBasicAuth(self.username, self.password))
         if r.ok:
-            print("saving to", os.path.abspath(file_path))
+            logging.info(f"saving to {os.path.abspath(file_path)}")
             with open(file_path, 'wb') as f:
                 for chunk in r.iter_content(chunk_size=1024 * 8):
                     if chunk:
@@ -78,11 +78,12 @@ class Wrangle:
                         f.flush()
                         os.fsync(f.fileno())
         else:  # HTTP status code 4XX/5XX
-            print("Download failed: status code {}\n{}".format(r.status_code, r.text))
+            logging.error("Download failed: status code {}\n{}".format(r.status_code, r.text))
     
     def unzip_unlink(self, relatiive_path):
+        global logging
         full_path = f'{self.out_loc}{relative_path}'
-        print(f'UNLINK:{full_path}')
+        logging.info(f'UNLINK:{full_path}')
         unzip_unlink(full_path, self.out_loc)
         pass
 
@@ -90,6 +91,13 @@ class Wrangle:
 
 
 if __name__ == "__main__":
+
+    global logging
+    logdir='/wsefs/pipeline/log'
+    filename = f'{logdir}/pipe-runner.log'
+    logging.basicConfig(filename=filename, format='%(asctime)s - %(message)s', level=logging.INFO)
+
+    logging.info(f'wrangler started')
 
     config = './wrangle.yaml'
     wr = Wrangle(config)

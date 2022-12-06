@@ -13,3 +13,7 @@ run:
 
 t:
 	docker run -it -v /wsefs:/wsefs wrangle python3 /wrangle/wrangle.py
+
+
+publish:
+	(cd /home/ec2-user/opt/ssebop-study; make publish)
