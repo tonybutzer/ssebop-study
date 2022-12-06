@@ -7,16 +7,16 @@ t:
 	tail /wsefs/pipeline/log/pipe-runner.log
 
 log:
-	        tail /wsefs/pipeline/log/pipe-runner.log
+	        tail -f /wsefs/pipeline/log/pipe-runner.log
 
-
-# cron:
-	# echo '*/5 * * * * ' `pwd`/run.sh > mycron
-	# cat mycron
-	# crontab mycron
 
 service:
 	./installService.sh
+
+start:
+	sudo systemctl enable pipe-runner
+	sudo systemctl start pipe-runner
+	sudo systemctl status pipe-runner
 
 stop:
 	sudo systemctl stop pipe-runner
