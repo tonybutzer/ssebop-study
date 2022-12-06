@@ -2,16 +2,21 @@ cat:
 	cat Makefile
 
 
+# lowercase in docker world
+Image=normtogrid 
+
 build:
-	docker build -t normToGrid .
+	docker build -t ${Image} .
 
 
 run:
-	docker run -it normToGrid bash
+	docker run -it ${Image} bash
 
 t:
-	docker run -it -v /wsefs:/wsefs normToGrid python3 /normToGrid/normToGrid.py
+	docker run -it -v /wsefs:/wsefs ${Image} python3 /normToGrid/normToGrid.py
 
+log:
+	tail /wsefs/pipeline/log/norm*.log
 
 publish:
 	(cd /home/ec2-user/opt/ssebop-study; make publish)

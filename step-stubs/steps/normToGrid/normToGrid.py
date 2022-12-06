@@ -23,8 +23,12 @@ class normToGrid:
             print('connection error occured')
             raise
     def norm_them_files(self):
+        global logging
         # simulate
+        logging.info('norm_them_files: simulated sleep 60');
         time.sleep(60)
+        logging.info('norm_them_files: COMPLETE ');
+        # maybe use rio commandline
 
 
 if __name__ == "__main__":
@@ -38,6 +42,8 @@ if __name__ == "__main__":
 
     config = './normToGrid.yaml'
     norm = normToGrid(config)
+
+    norm.norm_them_files()
     
             
 
