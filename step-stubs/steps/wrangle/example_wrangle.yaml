@@ -1,0 +1,7 @@
+---
+username: butzer@contractor.usgs.gov
+password: TOPSECRET-2022
+url: 'https://dds.cr.usgs.gov/highvolume/eviirs/Global_LST/expedited/VIIRS/2022/comp_293/'
+output_location: /wsefs/pipeline/sdata/
+outname: lst_viirs_20220103.zip
+site: "https://dds.cr.usgs.gov"
