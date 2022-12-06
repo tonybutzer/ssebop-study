@@ -10,7 +10,7 @@ def start_docker(step):
     volumes = ['/wsefs:/wsefs',]
     docker_client = docker.from_env()
     cmd = f'python3 {step}.py'
-    docker_image = step
+    docker_image = step.lower()
     container_name = step
     #container_obj = docker_client.containers.run(docker_image, cmd, detach=True, name=container_name)
     container_obj = docker_client.containers.run(docker_image, cmd, detach=False, 
