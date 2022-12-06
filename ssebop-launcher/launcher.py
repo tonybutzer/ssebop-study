@@ -53,12 +53,16 @@ def create_workorder(cfg):
     wo_name = f'ssebop-{my_day}'
     todo = cfg['todo']
     wo_file_name = f'{todo}/{wo_name}.todo'
+    my_yaml = yaml.dump(cfg['steps'], default_flow_style=False)
+    print(my_yaml)
+    with open(wo_file_name, 'w') as file:
+        file.write(my_yaml)
     return(wo_file_name) # will be name of workorder probaly with date 
 
 def babysit_pipeline(workorder):
     print(workorder)
     print('sleeping ...')
-    time.sleep(30)
+    time.sleep(1)
 
 
 
@@ -76,6 +80,6 @@ workorder = create_workorder(cfg)
 
 babysit_pipeline(workorder) # blocks
 
-status = stop(cfg['computeMachine'])
+# status = stop(cfg['computeMachine'])
 
 

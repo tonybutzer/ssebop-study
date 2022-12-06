@@ -2,7 +2,7 @@ cat:
 	cat Makefile
 
 
-t:
+t:	config
 	python3 launcher.py
 
 
