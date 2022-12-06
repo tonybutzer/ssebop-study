@@ -1,6 +1,6 @@
 <!--ts-->
 * [Design](#design)
-* [Integration Actions](#integration-actions)
+* [Integration Actions - 12/06/2022](#integration-actions---12062022)
    * [Wrangle](#wrangle)
    * [Docker](#docker)
    * [Dry-Run Wrangle](#dry-run-wrangle)
@@ -8,7 +8,7 @@
 * [BUGS](#bugs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Tue Dec  6 16:39:16 UTC 2022 -->
+<!-- Added by: ec2-user, at: Tue Dec  6 16:45:26 UTC 2022 -->
 
 <!--te-->
 
@@ -26,13 +26,14 @@
 	- shuts it self off - using `sudo shutdown -h now`
 
 
-# Integration Actions
+# Integration Actions - 12/06/2022
 ## Wrangle
 - add logging
-- add times
+- add timing of wget and unzip - about 12 minutes now
+- optimize with parallel downloads - tbd
 - discuss data locations
 	- /wsefs/pipeline/sdata - or wdata for wrangle
-	- /wsefe/pipeline/ndata - for snap to grid normalized data ?
+	- /wsefs/pipeline/ndata - for snap to grid normalized data ?
 ## Docker
 
 1. Build a base image - gabe
