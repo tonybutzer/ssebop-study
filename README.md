@@ -8,7 +8,7 @@
 * [BUGS](#bugs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Tue Dec  6 16:45:26 UTC 2022 -->
+<!-- Added by: ec2-user, at: Tue Dec  6 16:48:14 UTC 2022 -->
 
 <!--te-->
 
@@ -40,6 +40,9 @@
 	- steal from tony's repo
 2. Study step/wrangle Docker file from git - here:
 	- https://github.com/tonybutzer/ssebop-study/tree/main/step-stubs/steps/wrangle
+3. Study pipe-runner - gabe
+4. Study ssebop-launcher - runs on a priviledged machine - costanalyzer
+5. Discuss actions for thursday meeting - steffi
 
 
 ## Dry-Run Wrangle
