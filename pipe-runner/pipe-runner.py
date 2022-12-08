@@ -6,16 +6,16 @@ import docker
 
 def start_docker(step):
     global logging
-    logging.info(f'start_docker:{step}')
     volumes = ['/wsefs:/wsefs',]
     docker_client = docker.from_env()
     cmd = f'python3 {step}.py'
     docker_image = step.lower()
+    logging.info(f'start_docker:{docker_image}')
     container_name = step
     #container_obj = docker_client.containers.run(docker_image, cmd, detach=True, name=container_name)
     container_obj = docker_client.containers.run(docker_image, cmd, detach=False, 
                                                  volumes=volumes, auto_remove=True, name=container_name)
-    logging.info(f'{cmd} started {container_name} {docker_image} {container_obj.name}')
+    logging.info(f'{cmd} started {container_name} {docker_image}')
 
 def dequeue_work(work_order_file):
     os.unlink(work_order_file)
@@ -32,8 +32,8 @@ def do_work(wo_file):
     wl = read_wo(wo_file)
     logging.info(f'do_work: list {wl}')
     dequeue_work(wo_file)
-    start_docker(wl[0])
-    start_docker(wl[1])
+    for docker_image in wl:
+        start_docker(docker_image)
 
 def look_for_work(cfg, logging):
     todo_dir = cfg['todo']

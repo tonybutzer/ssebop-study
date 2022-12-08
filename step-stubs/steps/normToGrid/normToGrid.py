@@ -25,8 +25,9 @@ class normToGrid:
     def norm_them_files(self):
         global logging
         # simulate
-        logging.info('norm_them_files: simulated sleep 60');
-        time.sleep(60)
+        sleepy=10
+        logging.info('norm_them_files: simulated sleep {sleepy}');
+        time.sleep(sleepy)
         logging.info('norm_them_files: COMPLETE ');
         # maybe use rio commandline
 
