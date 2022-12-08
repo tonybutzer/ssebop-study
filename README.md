@@ -4,11 +4,12 @@
    * [Wrangle](#wrangle)
    * [Docker](#docker)
    * [Dry-Run Wrangle](#dry-run-wrangle)
+* [Monitoring](#monitoring)
 * [ssebop-study](#ssebop-study)
 * [BUGS](#bugs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Thu Dec  8 00:37:11 UTC 2022 -->
+<!-- Added by: ec2-user, at: Thu Dec  8 16:23:09 UTC 2022 -->
 
 <!--te-->
 
@@ -62,6 +63,42 @@
 		- 10 minutes to download
 		- 2 minutes to unzip
 
+# Monitoring
+```
+cdl
+
+cat Makefile
+
+cat:
+        cat Makefile
+
+
+clear:
+        ./clearLogs.sh
+
+
+tail:
+        tail *.log | grep started
+
+
+pipe:
+        cat pipe-runner.log | grep start_
+
+
+watch:
+        watch -n 4 make pipe
+
+dockers:
+        watch docker ps
+
+# tails last line of each logfile
+one:
+        ./wlogs.sh
+
+
+sdata:
+         watch -n 4 ls -lh /wsefs/pipeline/sdata/*.zip
+```
 # ssebop-study
 ssebop-study
 
