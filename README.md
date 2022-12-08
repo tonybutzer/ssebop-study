@@ -1,6 +1,6 @@
 <!--ts-->
 * [Design](#design)
-* [Integration Actions - 12/06/2022](#integration-actions---12062022)
+* [Integration Actions - 12/09/2022](#integration-actions---12092022)
    * [Wrangle](#wrangle)
    * [Docker](#docker)
    * [Dry-Run Wrangle](#dry-run-wrangle)
@@ -8,7 +8,7 @@
 * [BUGS](#bugs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: ec2-user, at: Thu Dec  8 00:32:11 UTC 2022 -->
+<!-- Added by: ec2-user, at: Thu Dec  8 00:37:11 UTC 2022 -->
 
 <!--te-->
 
@@ -25,8 +25,16 @@
 	- runs the workorder pipeline - 5 steps
 	- shuts it self off - using `sudo shutdown -h now`
 
+# Integration Actions - 12/09/2022
 
-# Integration Actions - 12/06/2022
+- demo tmux - watch docker - watch logs - 0_start_pipeline_gabe
+- where is the sample data?
+- where is kirk's data - any progress?
+- can we build a very simple notebook for:
+    - looking at input data affines - samples lines shape extent etc as a pandas data frame - talk about data compression - int16 ...
+    - a notebook that does etfFano - with a clean set of functions and classes
+
+- Integration Actions - 12/06/2022
 ## Wrangle
 - add logging
 - add timing of wget and unzip - about 12 minutes now
