@@ -79,8 +79,9 @@ class Wrangle:
     def unzip_unlink(self, relatiive_path):
         global logging
         full_path = f'{self.out_loc}{relative_path}'
-        logging.info(f'UNLINK:{full_path}')
+        logging.info(f'UNZIP:{full_path}')
         unzip_unlink(full_path, self.out_loc)
+        logging.info(f'UNLINK:{full_path}')
         pass
 
 
