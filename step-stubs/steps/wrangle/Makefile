@@ -3,7 +3,7 @@ cat:
 
 
 build:
-	cp ~/.config/wrangle.yaml .
+	cp /wsefs/pipeline/config/wrangle.yaml .
 	docker build -t wrangle .
 	rm wrangle.yaml
 
