@@ -10,7 +10,7 @@ build:
 
 
 run:
-	docker run -it ${Image} bash
+	docker run -it -v /wsefs:/wsefs ${Image} bash
 
 t:
 	docker run -it -v /wsefs:/wsefs ${Image} python3 /normToGrid/normToGrid.py
